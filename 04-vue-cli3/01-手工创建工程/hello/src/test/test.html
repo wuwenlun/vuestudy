@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function name(age) {
+        this.age = age
+        function  d() {
+            this.fuck = "me"
+        }
+        d.apply(void 0)
+    }
+    function c() {
+
+    }
+    name.apply(undefined,[10])
+    console.info(this.fuck)
+    name.apply(c,[10])
+    console.info(c.fuck)
+</script>
+</html>

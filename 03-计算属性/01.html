@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h2>{{fullName}}</h2>
+    <h2>{{simpleName}}</h2>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        // computed当计算属性没有改变时，多次调用计算属性只计算一次，vue会缓存起来，提高性能
+        computed: {
+            fullName: function () {
+                return this.firstName + " " + this.lastName
+            },
+            simpleName: {
+                set: function (newvalue) {
+                    this.firstName = "吴"
+                    this.lastName = "文伦"
+                },
+                get: function () {
+                    return this.firstName + " " + this.lastName
+                }
+            }
+        },
+        data: {
+            firstName: "wu",
+            lastName: "wenlun",
+        }
+    })
+</script>
+</html>

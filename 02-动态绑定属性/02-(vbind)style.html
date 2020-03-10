@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="app">
+    <p v-bind:style="{fontSize: '20px',color: hongse}">v-bind简写语法糖</p>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            hongse: "red"
+        }
+    })
+</script>
+</html>

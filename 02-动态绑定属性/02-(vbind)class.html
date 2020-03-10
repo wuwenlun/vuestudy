@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active {
+            color:red
+        }
+        .bold {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p v-bind:class="{active:isActive,bold: isBold}">v-bind简写语法糖</p>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            isActive:false,
+            isBold:true
+        }
+    })
+</script>
+</html>

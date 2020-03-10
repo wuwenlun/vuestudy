@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <img v-bind:src="imageurl">
+    <p>v-bind简写语法糖</p>
+    <img :src="imageurl">
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            imageurl: "http://pic18.nipic.com/20120103/8993051_170340691334_2.jpg"
+        }
+    })
+</script>
+</html>
